@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect } from "react";
+import Navbar from "./Folder/Navbar";
 
 function App() {
   const GetData = async () => {
@@ -16,7 +17,11 @@ function App() {
     GetData();
   }, []);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
