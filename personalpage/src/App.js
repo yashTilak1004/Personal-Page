@@ -1,25 +1,16 @@
 import axios from "axios";
-import { useEffect } from "react";
-import Navbar from "./Folder/Navbar";
+import Intro from "./Folder/Intro";
+import {BrowserRouter, Routes,Route} from 'react-router-dom';
 
 function App() {
-  const GetData = async () => {
-    try {
-      const res = await axios.get("http://localhost:4000/leetcode/user4354pU");
-      // assuming server returns JSON array/object as before
-      console.log(res);
-    } catch (err) {
-      console.error("Fetch data error:", err);
-    }
-  };
-
-  useEffect(() => {
-    GetData();
-  }, []);
 
   return (
     <div className="App">
-      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Intro />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
