@@ -50,12 +50,12 @@ export default function Navbar() {
     <Root>
       <CssBaseline />
       <AppBarSpacer />
-      <StyledDrawer variant="permanent" open={open}>
+      <StyledDrawer variant="permanent" open={open} anchor="right">
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            justifyContent: open ? "flex-end" : "center",
+            justifyContent: open ? "flex-start" : "center",
             px: 1,
             py: 1,
           }}
