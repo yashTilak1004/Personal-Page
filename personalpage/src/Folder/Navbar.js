@@ -14,8 +14,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
-const drawerWidth = 240;
-const miniWidth = 60;
+export const drawerWidth = 240;
+export const miniWidth = 60;
 
 const Root = styled("div")(({ theme }) => ({
   display: "flex",
@@ -66,7 +66,7 @@ export default function Navbar() {
         </Box>
 
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Inbox"].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
